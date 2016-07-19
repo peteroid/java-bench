@@ -5,8 +5,15 @@ import java.util.Random;
 class BenchSort {
   public static void main(String[] args){
     int len = Integer.parseInt(args[0]);
+    int iterations = Integer.parseInt(args[1]);
+    for (int i = 0; i < iterations; i++) {
+      sort(len, i);
+    }
+  }
+
+  public static void sort(int len, long seed) {
     int[] iArr = new int[len];
-    Random random = new Random(0);
+    Random random = new Random(seed);
 
     for (int i = 0; i < len; i++) {
       iArr[i] = random.nextInt();
