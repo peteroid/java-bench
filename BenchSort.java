@@ -10,7 +10,11 @@ class BenchSort {
 
     for (int i = 0; i < len; i++) {
       iArr[i] = random.nextInt();
+      if (i < 5) {
+        System.out.print(iArr[i] + " ");
+      } 
     }
+    
     System.out.println("Sorting array with len: " + new Integer(len));
 
     long preExecTime = System.nanoTime();
